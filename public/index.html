@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initialscale=1">
 	<title>MWS Batch 2</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href='manifest.json' rel='manifest'/>
+	<link rel="manifest" href="/manifest.json"/>
 </head>
 <body>
 	<div class="container">
@@ -13,25 +13,36 @@
 		<div class="sidebar"> <img src="images/photo.png" width=100%> </div>
 		<div class="content">
 			<div class="subcontent"> <a href="hitung.html"> Menghitung 2 Angka </a> </div>
-			<div class="subcontent"> <a href="peta.html"> Peta Kuliner </a> </div>
+			<div class="subcontent"> <a href="peta-json.html"> Peta Kuliner </a> </div>
 			<div class="subcontent"> <a href="profil.html"> Profil Saya </a> </div>
 		</div>
 		<div class="footer">Paramitha</div>
 	</div>
 
 	<script>
-	if (navigator.serviceWorker.controller) {
-		console.log("[PWA Builder] active service worker found, no need to register");
-	} else {
-		//Register the ServiceWorker
-		navigator.serviceWorker
-			.register("sw1.js", {
-				scope: "./"
-			})
-			.then(function(reg) {
-				console.log("Service worker has been registered for scope:" + reg.scope);
-			});
+	if ('serviceWorker' in navigator) {
+		// SW ada
+		navigator.serviceWorker.register('sw.js')
+			.then(() => console.log('Service Worker registered'))
+			.catch((error) => console.log("Registration failed:", error))
 	}
+	else {
+		console.log('Service-Worker not supported in this Browser');
+	}
+
+	// 	//Check ServiceWorker
+	// if (navigator.serviceWorker.controller) {
+	// 	console.log("[PWA Builder] active service worker found, no need to register");
+	// } else {
+	// 	//Register the ServiceWorker
+	// 	navigator.serviceWorker
+	// 		.register("sw1.js", {
+	// 			scope: "./"
+	// 		})
+	// 		.then(function(reg) {
+	// 			console.log("Service worker has been registered for scope:" + reg.scope);
+	// 		});
+	// }
 	</script>
 
 </body>

@@ -1,16 +1,17 @@
 {
-"name": "Google Developers Kejar MWS",
-"short_name": "MWS Mitha",
-"icons": [
-{
-"src": "/images/icon.png",
-"sizes": "128x128",
-"type": "image/png"
-}
-],
-"start_url": "/",
-"orientation": "portrait",
-"display": "standalone",
-"theme_color": "#2ea0db",
-"background_color": "#ffffff"
+    "name": "Google Developers Kejar MWS",
+    "short_name": "MWS Mitha",
+    "icons": [
+        {
+            "src": "/images/icon.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "orientation": "portrait",
+    "display": "standalone",
+    "theme_color": "#4f6fff",
+    "background_color": "#ffffff",
+    "description": "Belajar PWA dengan Inixindo"
 }

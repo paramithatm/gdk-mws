@@ -1,0 +1,49 @@
+{
+    "places": [
+        {
+            "lokasi": [
+                -6.2207293,
+                106.7917979
+            ],
+            "sponsor": "Plan B Spanish Restaurant",
+            "gambar": "images/planB.jpg",
+            "review": "Restoran Spanyol dekat Inixindo"
+        },
+        {
+            "lokasi": [
+                -6.2219932,
+                106.7990398
+            ],
+            "sponsor": "Fairmont Jakarta",
+            "gambar": "images/fairmont.jpg",
+            "review": "Hotel elite bintang 5"
+        },
+        {
+            "lokasi": [
+                -6.2292832,
+                106.8097366
+            ],
+            "sponsor": "Beer Garden",
+            "gambar": "images/beer.jpg",
+            "review": "Ngebir dulu pulang kantor"
+        },
+        {
+            "lokasi": [
+                -6.230399,
+                106.7977604
+            ],
+            "sponsor": "Trafique Coffee",
+            "gambar": "images/coffee.jpg",
+            "review": "Tempat kopi enak buat kerja"
+        },
+        {
+            "lokasi": [
+                -6.2222998,
+                106.7938069
+            ],
+            "sponsor": "BBQ Chicken Express",
+            "gambar": "images/bbq.jpg",
+            "review": "Murah meriah"
+        }
+    ]
+}
