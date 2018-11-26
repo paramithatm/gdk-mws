@@ -10,7 +10,7 @@
     ],
     "start_url": "/",
     "orientation": "portrait",
-    "display": "fullscreen", // "standalone",
+    "display": "standalone",
     "theme_color": "#4f6fff",
     "background_color": "#ffffff",
     "description": "Belajar PWA dengan Inixindo"
