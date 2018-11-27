@@ -1,4 +1,5 @@
-const URL = "../data/peta.json";
+const URL = "/data/peta.json";
+let places = []
 
 function findLocation(x, y) {
     for (var i = 0; i < places.length; i++) {
@@ -9,6 +10,14 @@ function findLocation(x, y) {
     return -1;
 }
 
+let gmb = document.getElementById("gmb");
+let rev = document.getElementById("review");
+let img = document.createElement('img');
+let par = document.createElement('p');
+img.style.cssText = 'width:400px;height:300px;margin:0px;'
+gmb.appendChild(img);
+rev.appendChild(par);
+
 function showLocation(e) {
     let ix = findLocation(e.latlng.lat, e.latlng.lng);
     if (ix >= 0) {
@@ -16,13 +25,6 @@ function showLocation(e) {
         par.textContent = places[ix].review;
     }
 }
-
-let gmb = document.getElementById("gmb");
-let rev = document.getElementById("review");
-let img = document.createElement('img');
-let par = document.createElement('p');
-gmb.appendChild(img);
-rev.appendChild(par);
 
 fetch(URL)
     .then(function (response) {
@@ -35,17 +37,13 @@ fetch(URL)
     })
     .then(resp => {
         loopPlaces(resp.places)
-        // let places = resp.places; localStorage.setItem('places', JSON.stringify(resp.places));
     })
     .catch(function (err) {
         console.log(err);
     });
 
-
-// get parsed json
-let places = JSON.parse(localStorage.getItem('places'));
-
-function loopPlaces(places) {
+function loopPlaces(plcs) {
+    places = plcs
     for (var p of places) {
         var marker = L.marker(p.lokasi)
                         .addTo(mymap)

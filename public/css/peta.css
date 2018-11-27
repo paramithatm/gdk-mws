@@ -23,5 +23,5 @@ html, body, #mapid {
 
 .review {
     grid-column: 6/-1;
-    background-color: palevioletred;
+    background-color: palevioletred
 }
